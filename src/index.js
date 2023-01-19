@@ -26,12 +26,7 @@ const Book = () => {
   )
 }
 
-const Image = () => (
-  <img
-    src='https://m.media-amazon.com/images/I/51ECRZXoGyL.jpg'
-    alt='Fairy Tale'
-  />
-)
+const Image = () => <img src='./images/fairy-tale.jpeg' alt='Fairy Tale' />
 
 const Title = () => <h2>Fairy Tale</h2>
 
