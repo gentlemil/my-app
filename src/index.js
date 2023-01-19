@@ -1,40 +1,39 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-// function Greeting() {
-//   return <h2 className='first-component'>my first component</h2>
-// }
+// Topic: create booklist similar to the UI from Amazon Page (check URL below)
+// https://www.amazon.com/stores/Stephen-King/author/B000AQ0842
 
-// I OPTION
-function Greeting() {
+const BookList = () => {
   return (
-    <div>
-      <h2>hello world</h2>
-      <ul>
-        <li>
-          <Person />
-        </li>
-      </ul>
-    </div>
+    <section>
+      <Book />
+    </section>
   )
 }
 
-// II OPTION
-// const Greeting = () => {
-//   return React.createElement(
-//     'div',
-//     {},
-//     React.createElement('h2', {}, 'hello world 2')
-//   )
-// }
-
-const Person = () => {
+const Book = () => {
   return (
-    <div className='myClass'>
-      <p>John Doe</p>
-    </div>
+    <article>
+      <Image />
+      <Title />
+      <Author />
+    </article>
   )
+}
+
+const Image = () => (
+  <img
+    src='https://m.media-amazon.com/images/I/51ECRZXoGyL.jpg'
+    alt='Fairy Tale'
+  />
+)
+
+const Title = () => <h2>Fairy Tale</h2>
+
+const Author = () => {
+  return <h4>Stephen King</h4>
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<Greeting />)
+root.render(<BookList />)
