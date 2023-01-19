@@ -32,6 +32,10 @@ body {
   text-align: center;
 }
 
+.book h4 {
+  color: red; /* does not work unless I add '!important' */
+}
+
 .book img {
   width: 100%;
   object-fit: cover;
