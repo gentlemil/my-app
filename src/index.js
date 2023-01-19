@@ -1,12 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
+import './index.css'
+
 // Topic: create booklist similar to the UI from Amazon Page (check URL below)
 // https://www.amazon.com/stores/Stephen-King/author/B000AQ0842
 
 const BookList = () => {
   return (
-    <section>
+    <section className='booklist'>
+      <Book />
+      <Book />
       <Book />
     </section>
   )
@@ -14,7 +18,7 @@ const BookList = () => {
 
 const Book = () => {
   return (
-    <article>
+    <article className='book'>
       <Image />
       <Title />
       <Author />
