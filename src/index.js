@@ -76,6 +76,7 @@ const books = [
 const BookList = () => {
   return (
     <section className='booklist'>
+      <EventExamples />
       {books.map((book) => {
         return <Book {...book} key={book.id} />
       })}
@@ -91,6 +92,17 @@ const Book = (props) => {
       <h2>{title}</h2>
       <h4>{author}</h4>
     </article>
+  )
+}
+
+const EventExamples = () => {
+  const handleButtonClick = () => {
+    alert('handle button click')
+  }
+  return (
+    <section>
+      <button onClick={handleButtonClick}>click me</button>
+    </section>
   )
 }
 
